@@ -6,14 +6,130 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		22DE8DFA2C74B3CA00FC6EEA /* LockedExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 22DE8DF12C74B3CA00FC6EEA /* LockedExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22DE8E072C74B3E500FC6EEA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DE8E062C74B3E500FC6EEA /* WidgetKit.framework */; };
+		22DE8E092C74B3E500FC6EEA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DE8E082C74B3E500FC6EEA /* SwiftUI.framework */; };
+		22DE8E142C74B3E600FC6EEA /* LockedWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 22DE8E042C74B3E500FC6EEA /* LockedWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22DE8E462C74CC7C00FC6EEA /* LockedCameraCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DE8E452C74CC7C00FC6EEA /* LockedCameraCapture.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22DE8DF82C74B3CA00FC6EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22DE8DD32C74B36800FC6EEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22DE8DF02C74B3CA00FC6EEA;
+			remoteInfo = LockedExtension;
+		};
+		22DE8E122C74B3E600FC6EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22DE8DD32C74B36800FC6EEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22DE8E032C74B3E500FC6EEA;
+			remoteInfo = LockedWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		22DE8DFF2C74B3CA00FC6EEA /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				22DE8DFA2C74B3CA00FC6EEA /* LockedExtension.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22DE8E192C74B3E600FC6EEA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				22DE8E142C74B3E600FC6EEA /* LockedWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		22DE8DDB2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockedCameraCaptureExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22DE8DF12C74B3CA00FC6EEA /* LockedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = LockedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22DE8E042C74B3E500FC6EEA /* LockedWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LockedWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22DE8E062C74B3E500FC6EEA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		22DE8E082C74B3E500FC6EEA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		22DE8E452C74CC7C00FC6EEA /* LockedCameraCapture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LockedCameraCapture.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/LockedCameraCapture.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		22DE8DFB2C74B3CA00FC6EEA /* Exceptions for "LockedExtension" folder in "LockedExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 22DE8DF02C74B3CA00FC6EEA /* LockedExtension */;
+		};
+		22DE8E152C74B3E600FC6EEA /* Exceptions for "LockedWidget" folder in "LockedWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */;
+		};
+		22DE8E1D2C74B45C00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Intent/AppCaptureIntent.swift,
+			);
+			target = 22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */;
+		};
+		22DE8E2E2C74B5FF00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Camera/AppStorageConfigProvider.swift,
+				Camera/Metal/MetalRenderer.swift,
+				Camera/Metal/MetalView.swift,
+				Camera/Metal/ViewRepresentable.swift,
+				Camera/OpenMainAppAction.swift,
+				Camera/View/CaptureInteractionView.swift,
+				Camera/View/ContentView.swift,
+				Camera/ViewModel/CamPreviewViewModel.swift,
+				Camera/ViewModel/CaptureProcessor.swift,
+				Camera/ViewModel/MainViewModel.swift,
+				Intent/AppCaptureIntent.swift,
+			);
+			target = 22DE8DF02C74B3CA00FC6EEA /* LockedExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		22DE8DDD2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				22DE8E2E2C74B5FF00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedExtension" target */,
+				22DE8E1D2C74B45C00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedWidgetExtension" target */,
+			);
 			path = LockedCameraCaptureExtensionDemo;
+			sourceTree = "<group>";
+		};
+		22DE8DF22C74B3CA00FC6EEA /* LockedExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				22DE8DFB2C74B3CA00FC6EEA /* Exceptions for "LockedExtension" folder in "LockedExtension" target */,
+			);
+			path = LockedExtension;
+			sourceTree = "<group>";
+		};
+		22DE8E0A2C74B3E500FC6EEA /* LockedWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				22DE8E152C74B3E600FC6EEA /* Exceptions for "LockedWidget" folder in "LockedWidgetExtension" target */,
+			);
+			path = LockedWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +142,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22DE8DEE2C74B3CA00FC6EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22DE8E012C74B3E500FC6EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22DE8E092C74B3E500FC6EEA /* SwiftUI.framework in Frameworks */,
+				22DE8E072C74B3E500FC6EEA /* WidgetKit.framework in Frameworks */,
+				22DE8E462C74CC7C00FC6EEA /* LockedCameraCapture.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				22DE8DDD2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo */,
+				22DE8DF22C74B3CA00FC6EEA /* LockedExtension */,
+				22DE8E0A2C74B3E500FC6EEA /* LockedWidget */,
+				22DE8E052C74B3E500FC6EEA /* Frameworks */,
 				22DE8DDC2C74B36800FC6EEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +177,20 @@
 			isa = PBXGroup;
 			children = (
 				22DE8DDB2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo.app */,
+				22DE8DF12C74B3CA00FC6EEA /* LockedExtension.appex */,
+				22DE8E042C74B3E500FC6EEA /* LockedWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		22DE8E052C74B3E500FC6EEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22DE8E452C74CC7C00FC6EEA /* LockedCameraCapture.framework */,
+				22DE8E062C74B3E500FC6EEA /* WidgetKit.framework */,
+				22DE8E082C74B3E500FC6EEA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +203,14 @@
 				22DE8DD72C74B36800FC6EEA /* Sources */,
 				22DE8DD82C74B36800FC6EEA /* Frameworks */,
 				22DE8DD92C74B36800FC6EEA /* Resources */,
+				22DE8DFF2C74B3CA00FC6EEA /* Embed ExtensionKit Extensions */,
+				22DE8E192C74B3E600FC6EEA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				22DE8DF92C74B3CA00FC6EEA /* PBXTargetDependency */,
+				22DE8E132C74B3E600FC6EEA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				22DE8DDD2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo */,
@@ -69,6 +221,50 @@
 			productName = LockedCameraCaptureExtensionDemo;
 			productReference = 22DE8DDB2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		22DE8DF02C74B3CA00FC6EEA /* LockedExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22DE8DFC2C74B3CA00FC6EEA /* Build configuration list for PBXNativeTarget "LockedExtension" */;
+			buildPhases = (
+				22DE8DED2C74B3CA00FC6EEA /* Sources */,
+				22DE8DEE2C74B3CA00FC6EEA /* Frameworks */,
+				22DE8DEF2C74B3CA00FC6EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				22DE8DF22C74B3CA00FC6EEA /* LockedExtension */,
+			);
+			name = LockedExtension;
+			packageProductDependencies = (
+			);
+			productName = LockedExtension;
+			productReference = 22DE8DF12C74B3CA00FC6EEA /* LockedExtension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+		22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22DE8E162C74B3E600FC6EEA /* Build configuration list for PBXNativeTarget "LockedWidgetExtension" */;
+			buildPhases = (
+				22DE8E002C74B3E500FC6EEA /* Sources */,
+				22DE8E012C74B3E500FC6EEA /* Frameworks */,
+				22DE8E022C74B3E500FC6EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				22DE8E0A2C74B3E500FC6EEA /* LockedWidget */,
+			);
+			name = LockedWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = LockedWidgetExtension;
+			productReference = 22DE8E042C74B3E500FC6EEA /* LockedWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +277,12 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					22DE8DDA2C74B36800FC6EEA = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					22DE8DF02C74B3CA00FC6EEA = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					22DE8E032C74B3E500FC6EEA = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -100,12 +302,28 @@
 			projectRoot = "";
 			targets = (
 				22DE8DDA2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo */,
+				22DE8DF02C74B3CA00FC6EEA /* LockedExtension */,
+				22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		22DE8DD92C74B36800FC6EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22DE8DEF2C74B3CA00FC6EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22DE8E022C74B3E500FC6EEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +340,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22DE8DED2C74B3CA00FC6EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22DE8E002C74B3E500FC6EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22DE8DF92C74B3CA00FC6EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22DE8DF02C74B3CA00FC6EEA /* LockedExtension */;
+			targetProxy = 22DE8DF82C74B3CA00FC6EEA /* PBXContainerItemProxy */;
+		};
+		22DE8E132C74B3E600FC6EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */;
+			targetProxy = 22DE8E122C74B3E600FC6EEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		22DE8DE82C74B36900FC6EEA /* Debug */ = {
@@ -252,6 +497,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -260,9 +508,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
@@ -270,10 +517,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.LockedCameraCaptureExtensionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -291,6 +539,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -299,9 +550,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
@@ -309,11 +559,158 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.LockedCameraCaptureExtensionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		22DE8DFD2C74B3CA00FC6EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GB9CHCB87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockedExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedExtension;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.LockedCameraCaptureExtensionDemo.LockedExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited) CAPTURE_EXTENSION";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22DE8DFE2C74B3CA00FC6EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GB9CHCB87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockedExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedExtension;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.LockedCameraCaptureExtensionDemo.LockedExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CAPTURE_EXTENSION;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22DE8E172C74B3E600FC6EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GB9CHCB87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockedWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedWidget;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.LockedCameraCaptureExtensionDemo.LockedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22DE8E182C74B3E600FC6EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GB9CHCB87;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockedWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedWidget;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.LockedCameraCaptureExtensionDemo.LockedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -334,6 +731,24 @@
 			buildConfigurations = (
 				22DE8DEB2C74B36900FC6EEA /* Debug */,
 				22DE8DEC2C74B36900FC6EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22DE8DFC2C74B3CA00FC6EEA /* Build configuration list for PBXNativeTarget "LockedExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22DE8DFD2C74B3CA00FC6EEA /* Debug */,
+				22DE8DFE2C74B3CA00FC6EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22DE8E162C74B3E600FC6EEA /* Build configuration list for PBXNativeTarget "LockedWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22DE8E172C74B3E600FC6EEA /* Debug */,
+				22DE8E182C74B3E600FC6EEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
