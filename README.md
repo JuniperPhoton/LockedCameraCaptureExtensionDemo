@@ -141,7 +141,7 @@ Also, not all the code you write in the main app can be compiled for the Capture
 
 ## Scene Phase handling
 
-In the Capture Extension, it is safe to assume that the `ScenePhase` environment variable is always active. However, when retrieving its value from `EnvironmentValues`, it may not be present.
+In the Capture Extension, it is safe to assume that the `ScenePhase` environment variable is always active. However, when retrieving its value from `EnvironmentValues`, its value will always be `.background`. Any logic relied on this value, for example, you might want to perform some tasks when the scene is in foreground, will be invalid.
 
 To address this issue, you don’t need to modify each component of your logic. Instead, you can simply introduce your own `ScenePhase` to the root view. However, if you’re not utilizing SwiftUI’s lifecycle, you’ll need to create your own version of `ScenePhase` and inject it into your code.
 
