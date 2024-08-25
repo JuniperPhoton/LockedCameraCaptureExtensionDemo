@@ -233,6 +233,8 @@ for await update in LockedCameraCaptureManager.shared.sessionContentUpdates {
 }
 ```
 
+> For some unknown reasons, no updates will be emited when I test this API in Xcode 16 Beta 6 with iOS 18 Beta 7. I have fired the issue to Apple via the Feedback app.
+
 For the files created in your main app, even those under the `AppGroup`, the Capture Extension doesn’t have access to them. This includes the SQLite files used by SwiftData or Core Data. If you’re using SwiftData or Core Data to store user data, you’ll need to provide an in-memory database and disable any features that require writing to the database. 
 
 For my PhotonCam app, I store users’ customized filters, aspect ratios, and frames using Core Data. While in the Capture Extension, I’ll provide default presets of these features for users to use.
