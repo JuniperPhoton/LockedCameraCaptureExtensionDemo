@@ -14,6 +14,8 @@ Before reading the detailed explanation below, you can also build and run the de
 
 The following sections will talk about some key implementation details and I highly suggest you reading the Apple [documentation](https://developer.apple.com/documentation/LockedCameraCapture/Creating-a-camera-experience-for-the-Lock-Screen) first.
 
+> You are welcome to subscribe my [Substack](https://juniperphoton.substack.com/p/lockedcameracapture-extension-demo) for free to view more articles.
+
 ## The anatomy of your app 
 
 The app that implements the `LockedCameraCapture` feature should at least contain 3 different parts:
