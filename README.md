@@ -328,3 +328,13 @@ struct LockedCameraCaptureView: View {
 ```
 
 Well, there are numerous other ways to inject the `AppStorageConfigProvider` into the rest of your application, such as using SwiftUI’s `EnvironmentObject`, `EnvironmentValues`, or other Dependencies Injection frameworks. Dependencies management is crucial when building a robust app, and it won’t be discussed further in this section.
+
+## Lock device orientation
+
+For the main target, there is a settings in Xcode to let you selecte the supported device orientations. For most camera app, you typically handle the orientation by rotating some UI elements like buttons or labels, instead of rotating the whole UI.
+
+For the Capture Extension, there is no such UI for you to configure. However, you can add the `UISupportedInterfaceOrientations` to the `Info.plist` in the Capture Extension.
+
+![orientation](https://github.com/user-attachments/assets/27afa359-4c05-433c-8d15-ff1132d5c231)
+
+
