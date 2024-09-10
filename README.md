@@ -16,6 +16,17 @@ The following sections will talk about some key implementation details and I hig
 
 > You are welcome to subscribe my [Substack](https://juniperphoton.substack.com/p/lockedcameracapture-extension-demo) for free to view more articles.
 
+The content of this article:
+
+1. The anatomy of your app
+2. How to debug the Capture Extension
+3. Prevent the extension from being killed
+4. Code sharing between main app & Capture Extension
+5. Scene Phase handling
+6. Store temporary files in the Capture Extension
+7. Lock device orientation
+8. Custom symbol image for ControlWidget
+
 ## The anatomy of your app 
 
 The app that implements the `LockedCameraCapture` feature should at least contain 3 different parts:
@@ -337,4 +348,22 @@ For the Capture Extension, there is no such UI for you to configure. However, yo
 
 ![orientation](https://github.com/user-attachments/assets/27afa359-4c05-433c-8d15-ff1132d5c231)
 
+## Custom symbol image for ControlWidget
 
+According to the [documentation](https://developer.apple.com/documentation/swiftui/controlwidget), only some particular views can be correctly rendered in a ControlWidget.
+
+> Controls are defined using templates in order to ensure that they control will work at all sizes and in all system spaces in which they might be displayed. These templates define images (specifically, symbol images) and text using simple SwiftUI views like [`Label`](https://developer.apple.com/documentation/swiftui/label), [`Text`](https://developer.apple.com/documentation/swiftui/text), and [`Image`](https://developer.apple.com/documentation/swiftui/image); and tint colors using the [`tint(_:)`](https://developer.apple.com/documentation/swiftui/controlwidgettemplate/tint(_:)) modifier.
+
+Particularly, regarding to images, only symbol images can be rendered.
+
+If the current SFSymbol images are good enough for you, then you can use those images using Image(systemName:) or `Label(:systemImage:)` inside the ControlWidget. However if you want to use your custom images, simple rasterized images won’t work in this case.
+
+To work with your customized images, you have to make it a symbol. Thera are a few guides that help you create your own custom symbol image:
+
+https://developer.apple.com/documentation/uikit/uiimage/creating_custom_symbol_images_for_your_app
+
+https://developer.apple.com/wwdc21/10250
+
+## Be aware of the bundle size
+
+https://juniperphoton.substack.com/p/reducing-bundle-size-my-approach?r=1ss9aj
