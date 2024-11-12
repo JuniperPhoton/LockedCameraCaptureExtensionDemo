@@ -1,0 +1,55 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NoPermissionHint" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have denied Photo Library or Camera permission, please grant them in the system's settings."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你拒绝了相机权限。请到设置里授予该权限。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你拒絕了相機權限。請到設置里授予該權限。"
+          }
+        }
+      }
+    },
+    "OPEN MAIN APP" : {
+
+    },
+    "TapToCaptureHint" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can tap the button below to capture a photo or use Volume buttons or Camera Control to capture."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你可以点击下方的拍照按钮或者使用音量键或相机控制来进行拍照。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你可以點擊下方的拍照按鈕或者使用音量鍵或相機控制來進行拍照。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

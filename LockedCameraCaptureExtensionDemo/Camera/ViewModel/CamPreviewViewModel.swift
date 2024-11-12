@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import AVFoundation
+import MetalLib
 
 class CamPreviewViewModel: NSObject, ObservableObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     @Published private(set) var previewImage: CIImage? = nil

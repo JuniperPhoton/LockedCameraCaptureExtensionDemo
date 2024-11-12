@@ -7,6 +7,7 @@
 
 import WidgetKit
 import SwiftUI
+import IntentsLib
 
 @main
 struct LockedWidgetBundle: WidgetBundle {

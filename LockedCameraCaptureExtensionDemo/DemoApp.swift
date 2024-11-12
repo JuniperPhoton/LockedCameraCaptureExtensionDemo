@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AppIntents
+import IntentsLib
 
 @main
 struct LockedCameraCaptureExtensionDemoApp: App {
@@ -14,4 +16,10 @@ struct LockedCameraCaptureExtensionDemoApp: App {
             ContentView(configProvider: AppStorageConfigProvider.standard)
         }
     }
+}
+
+struct MyAppPackage: AppIntentsPackage {
+   static var includedPackages: [any AppIntentsPackage.Type] {
+       [IntentsLibPackage.self]
+   }
 }

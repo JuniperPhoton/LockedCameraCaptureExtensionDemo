@@ -8,6 +8,8 @@ import SwiftUI
 import AVFoundation
 import Photos
 import LockedCameraCapture
+import Models
+import IntentsLib
 
 class MainViewModel: ObservableObject {
     @Published var showNoPermissionHint: Bool = false
