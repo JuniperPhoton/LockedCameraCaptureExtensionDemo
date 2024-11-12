@@ -26,6 +26,8 @@ The content of this article:
 6. Store temporary files in the Capture Extension
 7. Lock device orientation
 8. Custom symbol image for ControlWidget
+9. Be aware of the bundle size
+10. Additional Information
 
 ## The anatomy of your app 
 
@@ -366,4 +368,19 @@ https://developer.apple.com/wwdc21/10250
 
 ## Be aware of the bundle size
 
+Building and including all source codes and assets for all targets will increase the app bundle size. Here are some techniques that can help analyze and reduce the bundle size.
+
 https://juniperphoton.substack.com/p/reducing-bundle-size-my-approach?r=1ss9aj
+
+## Additional Information
+
+### CameraCaptureIntent implementation should be built against the app target
+
+The implementation of ``CameraCaptureIntent`` should always be built against the App and the extension targets; otherwise, it won't be discovered as expected.
+
+If you own your framework, it possible that you put this implementation in the framework and set the target membership to be included in the App and the extension targets, even if the source code is in the framework itself.
+
+> Note: it looks like there is a specific API [AppIntentsPackage](https://developer.apple.com/documentation/appintents/appintentspackage) that should solve this discovery issue. But it won't work.
+
+There is a post about this issue:
+[AppIntentsPackage protocol with SPM package not working](https://forums.developer.apple.com/forums/thread/732535).
