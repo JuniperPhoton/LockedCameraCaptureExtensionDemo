@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MetalLib
 
 struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
@@ -32,7 +33,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             if viewModel.showNoPermissionHint {
-                Text("You have denied Photo Library or Camera permission, please grant them in the system's settings.")
+                Text("NoPermissionHint")
             } else {
                 // This demo uses MTKView to render CIImage, showing the possibility to not use AVCaptureVideoPreviewLayer.
                 MetalView(renderer: previewViewModel.renderer, enableSetNeedsDisplay: true)
@@ -47,6 +48,11 @@ struct ContentView: View {
                     OpenMainAppButton()
                         .padding(.bottom)
 #endif
+                    Text("TapToCaptureHint")
+                        .foregroundStyle(.white)
+                        .font(.footnote)
+                        .padding()
+                    
                     ZStack {
                         SwitchCameraPositionButton(viewModel: viewModel)
                             .frame(maxWidth: .infinity, alignment: .trailing)

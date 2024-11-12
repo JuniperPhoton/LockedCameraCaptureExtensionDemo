@@ -5,6 +5,7 @@
 //  Created by Photon Juniper on 2024/8/21.
 //
 import SwiftUI
+import Models
 
 class AppUserDefaultSettings {
     static let shared = AppUserDefaultSettings()

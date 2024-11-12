@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppIntents
 
 @main
 struct LockedCameraCaptureExtensionDemoApp: App {
