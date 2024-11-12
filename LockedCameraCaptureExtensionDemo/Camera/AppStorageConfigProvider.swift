@@ -7,7 +7,7 @@
 import Foundation
 import LockedCameraCapture
 
-struct AppStorageConfigProvider {
+struct AppStorageConfigProvider : Sendable {
     let rootURL: URL?
 }
 

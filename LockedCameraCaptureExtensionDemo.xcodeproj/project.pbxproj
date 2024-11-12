@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2206C5302CE31EF600744B0F /* MetalLib in Frameworks */ = {isa = PBXBuildFile; productRef = 2206C52F2CE31EF600744B0F /* MetalLib */; };
+		2206C5322CE31EFC00744B0F /* MetalLib in Frameworks */ = {isa = PBXBuildFile; productRef = 2206C5312CE31EFC00744B0F /* MetalLib */; };
+		22722BB92CE3258E0045DB78 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 22722BB82CE3258E0045DB78 /* Models */; };
+		22722BBD2CE325980045DB78 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 22722BBC2CE325980045DB78 /* Models */; };
+		22722BC32CE325FD0045DB78 /* MetalLib in Frameworks */ = {isa = PBXBuildFile; productRef = 22722BC22CE325FD0045DB78 /* MetalLib */; };
+		22722BC62CE326050045DB78 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 22722BC52CE326050045DB78 /* Models */; };
+		22722D542CE3314A0045DB78 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 22722D532CE3314A0045DB78 /* Models */; };
 		22DE8DFA2C74B3CA00FC6EEA /* LockedExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 22DE8DF12C74B3CA00FC6EEA /* LockedExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		22DE8E072C74B3E500FC6EEA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DE8E062C74B3E500FC6EEA /* WidgetKit.framework */; };
 		22DE8E092C74B3E500FC6EEA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DE8E082C74B3E500FC6EEA /* SwiftUI.framework */; };
@@ -32,6 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		22722D4B2CE32FDA0045DB78 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22DE8DFF2C74B3CA00FC6EEA /* Embed ExtensionKit Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,6 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2206C52E2CE31E9100744B0F /* MetalLib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MetalLib; path = Packages/MetalLib; sourceTree = "<group>"; };
+		22722BB02CE324C80045DB78 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = Packages/Models; sourceTree = "<group>"; };
+		22722CE42CE32F0F0045DB78 /* IntentsLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = IntentsLib.xcodeproj; sourceTree = "<group>"; };
 		22DE8DDB2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockedCameraCaptureExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DE8DF12C74B3CA00FC6EEA /* LockedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = LockedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DE8E042C74B3E500FC6EEA /* LockedWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LockedWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +86,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		22722D522CE331180045DB78 /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Intent/AppCaptureIntent.swift,
+			);
+			target = 22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */;
+		};
 		22DE8DFB2C74B3CA00FC6EEA /* Exceptions for "LockedExtension" folder in "LockedExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -80,20 +107,10 @@
 			);
 			target = 22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */;
 		};
-		22DE8E1D2C74B45C00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedWidgetExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Intent/AppCaptureIntent.swift,
-			);
-			target = 22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */;
-		};
 		22DE8E2E2C74B5FF00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Camera/AppStorageConfigProvider.swift,
-				Camera/Metal/MetalRenderer.swift,
-				Camera/Metal/MetalView.swift,
-				Camera/Metal/ViewRepresentable.swift,
 				Camera/OpenMainAppAction.swift,
 				Camera/View/CaptureInteractionView.swift,
 				Camera/View/ContentView.swift,
@@ -101,6 +118,7 @@
 				Camera/ViewModel/CaptureProcessor.swift,
 				Camera/ViewModel/MainViewModel.swift,
 				Intent/AppCaptureIntent.swift,
+				Localizable.xcstrings,
 			);
 			target = 22DE8DF02C74B3CA00FC6EEA /* LockedExtension */;
 		};
@@ -111,7 +129,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				22DE8E2E2C74B5FF00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedExtension" target */,
-				22DE8E1D2C74B45C00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedWidgetExtension" target */,
+				22722D522CE331180045DB78 /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedWidgetExtension" target */,
 			);
 			path = LockedCameraCaptureExtensionDemo;
 			sourceTree = "<group>";
@@ -139,6 +157,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22722BC62CE326050045DB78 /* Models in Frameworks */,
+				22722BC32CE325FD0045DB78 /* MetalLib in Frameworks */,
+				22722BB92CE3258E0045DB78 /* Models in Frameworks */,
+				2206C5302CE31EF600744B0F /* MetalLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +168,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22722BBD2CE325980045DB78 /* Models in Frameworks */,
+				2206C5322CE31EFC00744B0F /* MetalLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +179,7 @@
 			files = (
 				22DE8E092C74B3E500FC6EEA /* SwiftUI.framework in Frameworks */,
 				22DE8E072C74B3E500FC6EEA /* WidgetKit.framework in Frameworks */,
+				22722D542CE3314A0045DB78 /* Models in Frameworks */,
 				22DE8E462C74CC7C00FC6EEA /* LockedCameraCapture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,9 +187,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22722CE62CE32F0F0045DB78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		22DE8DD22C74B36800FC6EEA = {
 			isa = PBXGroup;
 			children = (
+				22722BB02CE324C80045DB78 /* Models */,
+				2206C52E2CE31E9100744B0F /* MetalLib */,
 				22DE8DDD2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo */,
 				22DE8DF22C74B3CA00FC6EEA /* LockedExtension */,
 				22DE8E0A2C74B3E500FC6EEA /* LockedWidget */,
@@ -205,6 +239,7 @@
 				22DE8DD92C74B36800FC6EEA /* Resources */,
 				22DE8DFF2C74B3CA00FC6EEA /* Embed ExtensionKit Extensions */,
 				22DE8E192C74B3E600FC6EEA /* Embed Foundation Extensions */,
+				22722D4B2CE32FDA0045DB78 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +252,10 @@
 			);
 			name = LockedCameraCaptureExtensionDemo;
 			packageProductDependencies = (
+				2206C52F2CE31EF600744B0F /* MetalLib */,
+				22722BB82CE3258E0045DB78 /* Models */,
+				22722BC22CE325FD0045DB78 /* MetalLib */,
+				22722BC52CE326050045DB78 /* Models */,
 			);
 			productName = LockedCameraCaptureExtensionDemo;
 			productReference = 22DE8DDB2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo.app */;
@@ -239,6 +278,8 @@
 			);
 			name = LockedExtension;
 			packageProductDependencies = (
+				2206C5312CE31EFC00744B0F /* MetalLib */,
+				22722BBC2CE325980045DB78 /* Models */,
 			);
 			productName = LockedExtension;
 			productReference = 22DE8DF12C74B3CA00FC6EEA /* LockedExtension.appex */;
@@ -261,6 +302,7 @@
 			);
 			name = LockedWidgetExtension;
 			packageProductDependencies = (
+				22722D532CE3314A0045DB78 /* Models */,
 			);
 			productName = LockedWidgetExtension;
 			productReference = 22DE8E042C74B3E500FC6EEA /* LockedWidgetExtension.appex */;
@@ -293,12 +335,24 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 22DE8DD22C74B36800FC6EEA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				22722BC12CE325FD0045DB78 /* XCLocalSwiftPackageReference "Packages/MetalLib" */,
+				22722BC42CE326050045DB78 /* XCLocalSwiftPackageReference "Packages/Models" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 22DE8DDC2C74B36800FC6EEA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 22722CE62CE32F0F0045DB78 /* Products */;
+					ProjectRef = 22722CE42CE32F0F0045DB78 /* IntentsLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				22DE8DDA2C74B36800FC6EEA /* LockedCameraCaptureExtensionDemo */,
@@ -427,6 +481,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -481,6 +536,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -754,6 +810,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		22722BC12CE325FD0045DB78 /* XCLocalSwiftPackageReference "Packages/MetalLib" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/MetalLib;
+		};
+		22722BC42CE326050045DB78 /* XCLocalSwiftPackageReference "Packages/Models" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Models;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2206C52F2CE31EF600744B0F /* MetalLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalLib;
+		};
+		2206C5312CE31EFC00744B0F /* MetalLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalLib;
+		};
+		22722BB82CE3258E0045DB78 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		22722BBC2CE325980045DB78 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		22722BC22CE325FD0045DB78 /* MetalLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalLib;
+		};
+		22722BC52CE326050045DB78 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		22722D532CE3314A0045DB78 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22DE8DD32C74B36800FC6EEA /* Project object */;
 }
