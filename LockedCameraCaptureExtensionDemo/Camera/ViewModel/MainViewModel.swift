@@ -21,18 +21,17 @@ class MainViewModel: ObservableObject {
     }
     @Published var isSettingUpCamera = false
     @Published var showFlashScreen = false
-    
-    private var session: AVCaptureSession? = nil
-    private var photoOutput: AVCapturePhotoOutput? = nil
+    @Published var showSettings = false
     
     private let camPreviewViewModel: CamPreviewViewModel
     private let captureProcessor: CaptureProcessor
+    private let cameraService = CameraSessionService(name: "main_camera")
     
     init(camPreviewViewModel: CamPreviewViewModel, captureProcessor: CaptureProcessor) {
         self.camPreviewViewModel = camPreviewViewModel
         self.captureProcessor = captureProcessor
     }
-
+    
     @MainActor
     func setup() async {
         guard await requestForPermission() else {
@@ -45,13 +44,9 @@ class MainViewModel: ObservableObject {
     
     @MainActor
     func capturePhoto() async {
-        guard let photoOutput = photoOutput else {
-            print("can't find photo output")
+        guard await cameraService.capturePhoto(delegate: captureProcessor) else {
             return
         }
-        
-        let settings = AVCapturePhotoSettings()
-        photoOutput.capturePhoto(with: settings, delegate: captureProcessor)
         
         self.showFlashScreen = true
         try? await Task.sleep(for: .seconds(0.2))
@@ -72,12 +67,8 @@ class MainViewModel: ObservableObject {
     
     @MainActor
     func stopCamera() async {
-        guard let cameraSession = self.session else {
-            return
-        }
-        
-        cameraSession.stopRunning()
-        self.session = nil
+        print("stop camera")
+        await self.cameraService.stop()
     }
     
     @MainActor
@@ -93,57 +84,12 @@ class MainViewModel: ObservableObject {
             isSettingUpCamera = false
         }
         
-        print("start setting up")
-        
-        guard let (cameraSession, photoOutput) = await setupCameraSession(position: cameraPosition) else {
+        guard await cameraService.setupCameraSession(position: cameraPosition) else {
             return
         }
         
-        self.session = cameraSession
-        self.photoOutput = photoOutput
-    }
-    
-    private nonisolated func setupCameraSession(position: CameraPosition) async -> (AVCaptureSession, AVCapturePhotoOutput)? {
-        do {
-            let session = AVCaptureSession()
-            session.beginConfiguration()
-            session.sessionPreset = .photo
-            
-            guard let device = AVCaptureDevice.default(
-                .builtInWideAngleCamera,
-                for: .video,
-                position: position.avFoundationPosition
-            ) else {
-                print("can't find AVCaptureDevice")
-                return nil
-            }
-            
-            session.addInput(try AVCaptureDeviceInput(device: device))
-            
-            let videoOutput = AVCaptureVideoDataOutput()
+        if let videoOutput = await cameraService.videoOutput {
             videoOutput.setSampleBufferDelegate(camPreviewViewModel, queue: camPreviewViewModel.previewQueue)
-            
-            session.addOutput(videoOutput)
-            
-            let photoOutput = AVCapturePhotoOutput()
-            session.addOutput(photoOutput)
-            
-            if let connection = videoOutput.connection(with: .video) {
-                if connection.isVideoRotationAngleSupported(90) {
-                    connection.videoRotationAngle = 90
-                }
-                if connection.isVideoMirroringSupported && position == .front {
-                    connection.isVideoMirrored = true
-                }
-            }
-            
-            session.commitConfiguration()
-            session.startRunning()
-            
-            return (session, photoOutput)
-        } catch {
-            print("error while setting up camera \(error)")
-            return nil
         }
     }
     

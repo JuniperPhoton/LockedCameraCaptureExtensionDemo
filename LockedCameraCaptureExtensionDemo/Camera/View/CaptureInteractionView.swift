@@ -11,6 +11,13 @@ import AVKit
 
 extension View {
     @ViewBuilder
+    func registerOnCameraCaptureEvent() -> some View {
+        self.onPressCapture {
+            // empty
+        }
+    }
+    
+    @ViewBuilder
     func onPressCapture(action: @escaping () -> Void) -> some View {
         if #available(iOS 18.0, *) {
             self.onCameraCaptureEvent { event in
@@ -28,12 +35,10 @@ extension View {
                     break
                 }
             }
-        } else if #available(iOS 17.2, *) {
+        } else {
             self.background {
                 CaptureInteractionView(action: action)
             }
-        } else {
-            self
         }
     }
 }

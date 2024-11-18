@@ -27,5 +27,6 @@ struct LockedCameraCaptureView: View {
         ContentView(configProvider: AppStorageConfigProvider(session))
             .environment(\.scenePhase, .active)
             .environment(\.openMainApp, OpenMainAppAction(session: session))
+            .environment(\.inCaptureExtension, true)
     }
 }
