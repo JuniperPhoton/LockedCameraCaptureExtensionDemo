@@ -72,6 +72,8 @@ Please be aware that when the users click the Control Widget, iOS will determine
 
 ### Implement `AVCaptureEventInteraction`
 
+> UPDATE: On iOS 18.0, you can use [`onCameraCaptureEvent(isEnabled:primaryAction:secondaryAction:)`](https://developer.apple.com/documentation/SwiftUI/View/onCameraCaptureEvent(isEnabled:primaryAction:secondaryAction:)) in SwiftUI to provide such functionality.
+
 The `AVCaptureEventInteraction` is a subclass of `UIInteraction` introduced in iOS 17.2 as part of the UIKit framework.
 
 > `UIInteraction`: The protocol that an interaction implements to access the view that owns it.
