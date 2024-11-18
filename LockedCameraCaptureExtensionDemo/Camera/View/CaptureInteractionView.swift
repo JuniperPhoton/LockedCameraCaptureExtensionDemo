@@ -12,7 +12,23 @@ import AVKit
 extension View {
     @ViewBuilder
     func onPressCapture(action: @escaping () -> Void) -> some View {
-        if #available(iOS 17.2, *) {
+        if #available(iOS 18.0, *) {
+            self.onCameraCaptureEvent { event in
+                switch event.phase {
+                case .ended:
+                    action()
+                default:
+                    break
+                }
+            } secondaryAction: { event in
+                switch event.phase {
+                case .ended:
+                    action()
+                default:
+                    break
+                }
+            }
+        } else if #available(iOS 17.2, *) {
             self.background {
                 CaptureInteractionView(action: action)
             }
