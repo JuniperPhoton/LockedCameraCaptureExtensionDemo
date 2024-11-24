@@ -7,6 +7,9 @@
     "Capture photos with MyApp." : {
 
     },
+    "Dismiss" : {
+
+    },
     "NoPermissionHint" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -31,6 +34,12 @@
       }
     },
     "OPEN MAIN APP" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Settings Item" : {
 
     },
     "TapToCaptureHint" : {

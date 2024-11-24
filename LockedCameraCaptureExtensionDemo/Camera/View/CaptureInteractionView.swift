@@ -28,12 +28,10 @@ extension View {
                     break
                 }
             }
-        } else if #available(iOS 17.2, *) {
+        } else {
             self.background {
                 CaptureInteractionView(action: action)
             }
-        } else {
-            self
         }
     }
 }

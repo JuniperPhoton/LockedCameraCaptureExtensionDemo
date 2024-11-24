@@ -89,6 +89,7 @@
 		22722D522CE331180045DB78 /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Camera/Misc/LaunchSourceTracker.swift,
 				Intent/AppCaptureIntent.swift,
 			);
 			target = 22DE8E032C74B3E500FC6EEA /* LockedWidgetExtension */;
@@ -110,13 +111,20 @@
 		22DE8E2E2C74B5FF00FC6EEA /* Exceptions for "LockedCameraCaptureExtensionDemo" folder in "LockedExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Camera/AppEnvironmentValues.swift,
 				Camera/AppStorageConfigProvider.swift,
+				Camera/CameraSessionService.swift,
+				Camera/Misc/AVCaptureSessionControlsDelegateImpl.swift,
+				Camera/Misc/LaunchSourceTracker.swift,
 				Camera/OpenMainAppAction.swift,
 				Camera/View/CaptureInteractionView.swift,
 				Camera/View/ContentView.swift,
+				Camera/View/ProtectTerminatedView.swift,
+				Camera/View/SettingsPage.swift,
 				Camera/ViewModel/CamPreviewViewModel.swift,
 				Camera/ViewModel/CaptureProcessor.swift,
 				Camera/ViewModel/MainViewModel.swift,
+				Camera/ViewModel/SettingsViewModel.swift,
 				Intent/AppCaptureIntent.swift,
 				Localizable.xcstrings,
 			);
@@ -553,6 +561,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedCamDemo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
@@ -565,7 +574,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
@@ -595,6 +604,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LockedCamDemo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera permission to access and take photos.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires photo library permission to add photos to your library.";
@@ -607,7 +617,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.6;

@@ -35,8 +35,13 @@ struct AppCaptureIntent: CameraCaptureIntent {
     static let title: LocalizedStringResource = "AppCaptureIntent"
     static let description = IntentDescription("Capture photos with MyApp.")
     
+    @Dependency
+    var launchSourceTracker: LaunchSourceTracker
+    
     @MainActor
     func perform() async throws -> some IntentResult {
+        print("AppCaptureIntent will perform")
+        launchSourceTracker.setLaunchFrom(self)
         return .result()
     }
 }

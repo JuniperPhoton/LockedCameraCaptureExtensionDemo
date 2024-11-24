@@ -10,6 +10,7 @@ import MetalLib
 
 struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.inCaptureExtension) private var inCaptureExtension
     
     @StateObject private var previewViewModel: CamPreviewViewModel
     @StateObject private var viewModel: MainViewModel
@@ -54,10 +55,15 @@ struct ContentView: View {
                         .padding()
                     
                     ZStack {
-                        SwitchCameraPositionButton(viewModel: viewModel)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                        if !inCaptureExtension {
+                            SettingsButton(viewModel: viewModel)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
                         
                         CaptureButton(viewModel: viewModel)
+                        
+                        SwitchCameraPositionButton(viewModel: viewModel)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
                     }
                 }
                 .padding()
@@ -78,26 +84,41 @@ struct ContentView: View {
         .background {
             Color.black.ignoresSafeArea()
         }
-        .animation(.default, value: viewModel.isSettingUpCamera)
-        .animation(.default, value: captureProcessor.saveResultText)
         .onPressCapture {
             Task {
                 await viewModel.capturePhoto()
             }
         }
+        .animation(.default, value: viewModel.isSettingUpCamera)
+        .animation(.default, value: captureProcessor.saveResultText)
         .task(id: scenePhase) {
             switch scenePhase {
             case .background:
                 await viewModel.stopCamera()
             case .active:
                 await viewModel.updateFromAppContext()
-                await viewModel.setup()
+                
+                if !viewModel.showSettings {
+                    await viewModel.setup()
+                }
             default:
                 break
             }
         }
+        .onChange(of: viewModel.showSettings) {
+            Task {
+                if viewModel.showSettings {
+                    await viewModel.stopCamera()
+                } else {
+                    await viewModel.setup()
+                }
+            }
+        }
         .task {
             previewViewModel.initializeRenderer()
+        }
+        .fullScreenCover(isPresented: $viewModel.showSettings) {
+            SettingsPage()
         }
     }
 }
@@ -116,6 +137,23 @@ private struct SwitchCameraPositionButton: View {
                 .foregroundStyle(viewModel.cameraPosition == .back ? .white : .black)
                 .background {
                     Circle().fill(Color.white.opacity(viewModel.cameraPosition == .back ? 0.1 : 1.0))
+                }
+        }.buttonStyle(.plain)
+    }
+}
+
+private struct SettingsButton: View {
+    @ObservedObject var viewModel: MainViewModel
+    
+    var body: some View {
+        Button {
+            viewModel.showSettings = true
+        } label: {
+            Image(systemName: "gear")
+                .padding()
+                .foregroundStyle(.white)
+                .background {
+                    Circle().fill(Color.white.opacity(0.1))
                 }
         }.buttonStyle(.plain)
     }
