@@ -11,13 +11,6 @@ import AVKit
 
 extension View {
     @ViewBuilder
-    func registerOnCameraCaptureEvent() -> some View {
-        self.onPressCapture {
-            // empty
-        }
-    }
-    
-    @ViewBuilder
     func onPressCapture(action: @escaping () -> Void) -> some View {
         if #available(iOS 18.0, *) {
             self.onCameraCaptureEvent { event in
